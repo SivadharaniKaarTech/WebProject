@@ -13,6 +13,9 @@ export class Page1Component {
   record:any=[]
   constructor(private registerService: RegisterService) {
   }
+  ngOnInit(){
+    this.onscroll();
+  }
   add() {
    //this.startIndex=0;
     this.record = this.registerService.register(this.startIndex);
