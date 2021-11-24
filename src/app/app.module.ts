@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 import {MatCardModule} from '@angular/material/card';
 import { Page1Component } from './page1/page1.component';
@@ -19,7 +21,9 @@ import { Page1Component } from './page1/page1.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule,
+    InfiniteScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]
