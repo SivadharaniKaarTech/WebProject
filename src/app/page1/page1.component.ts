@@ -14,7 +14,7 @@ export class Page1Component {
   constructor(private registerService: RegisterService) {
   }
   ngOnInit(){
-    this.onscroll();
+    this.firstCall();
   }
   add() {
    //this.startIndex=0;
@@ -26,5 +26,10 @@ export class Page1Component {
 this.startIndex +=10;
 this.add();
 console.log(this.startIndex);
+  }
+  firstCall(){
+    this.record=this.registerService.register(this.startIndex);
+    this.totalRec=this.totalRec.concat( this.record)
+    console.log(this.totalRec);
   }
 }
