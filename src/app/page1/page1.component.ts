@@ -9,8 +9,10 @@ import { RegisterService } from '../service/register.service';
 })
 export class Page1Component {
   startIndex=0;
+  endIndex=0;
   totalRec=[]
   record:any=[]
+  pagedata:any;
   constructor(private registerService: RegisterService) {
   }
   ngOnInit(){
@@ -18,17 +20,19 @@ export class Page1Component {
   }
   add() {
    //this.startIndex=0;
-    this.record = this.registerService.register(this.startIndex);
+    this.record = this.registerService.register(this.startIndex,this.endIndex);
     this.totalRec=this.totalRec.concat( this.record)
     console.log(this.totalRec);
   }
   onscroll(){
 this.startIndex +=10;
+this.endIndex=this.startIndex+10;
 this.add();
 console.log(this.startIndex);
   }
   firstCall(){
-    this.record=this.registerService.register(this.startIndex);
+    this.endIndex=15;
+    this.record=this.registerService.register(this.startIndex,this.endIndex);
     this.totalRec=this.totalRec.concat( this.record)
     console.log(this.totalRec);
   }

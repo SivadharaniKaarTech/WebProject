@@ -6,11 +6,11 @@ import {HttpClient} from '@angular/common/http';
 export class RegisterService {
   
   constructor(private http: HttpClient) { }
-  register(Index: number) {
+  register(Index: number, End: number) {
 
     return this.http.post('https://reqres.in/api/registerUser', {
 
-      Index,
+      Index,End
 
     });
 }

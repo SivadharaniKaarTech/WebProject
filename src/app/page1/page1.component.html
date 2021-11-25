@@ -1,74 +1,29 @@
-<div class="infinite-scroll-auto" infinite-scroll [infiniteScrollDistance]="2" 
-(scrolled)="onscroll()" >
+<div class="infinite-scroll-auto" infinite-scroll [infiniteScrollDistance]="2" (scrolled)="onscroll()">
   <div class="container">
-  <div class="row-1">
-      <mat-card>
-        <div class="col-1">
-          1
+    <div class="p-1" >
+      <div class=" row">
+        <mat-card class="rounded-left col tab border-right">gender</mat-card>
+        <mat-card class="col tab border-right">loe</mat-card>
+        <mat-card class="col tab border-right">lunch</mat-card>
+        <mat-card class="col tab border-right">tpc</mat-card>
+        <mat-card class="col tab border-right">maths</mat-card>
+        <mat-card class="col tab border-right">rs</mat-card>
+        <mat-card class="rounded-right col tab">ws</mat-card>
+        
+      </div>
+      <div *ngFor="let data of record">
+        <div class=" row">
+          <mat-card class="rounded-left col tab border-right">gender</mat-card>
+          <mat-card class="col tab border-right">loe</mat-card>
+          <mat-card class="col tab border-right">lunch</mat-card>
+          <mat-card class="col tab border-right">tpc</mat-card>
+          <mat-card class="col tab border-right">maths</mat-card>
+          <mat-card class="col tab border-right">rs</mat-card>
+          <mat-card class="rounded-right col tab">ws</mat-card>
+          
         </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      
-  </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -231,5 +186,3 @@
               </div>
     </div>
   </div>--->
-  
-  
